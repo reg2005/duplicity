@@ -21,5 +21,5 @@ RUN apt-get update -y \
         duplicity \
         python-paramiko \
     && \
-    apt-get upgrade && \
+    apt-get upgrade -y && \
     apt-get clean

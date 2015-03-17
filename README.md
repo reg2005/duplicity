@@ -16,7 +16,7 @@ docker run \
     -v root/.ssh:root/.ssh \
     kendu/duplicity \
     bash -c "<your duplicity command>
-    ```
+```
 
 For simple backups to secure locations such as local nas you can simply use the
 --no-encryiption option.
