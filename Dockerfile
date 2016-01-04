@@ -1,25 +1,34 @@
+################################################################################
+#                                                                              #
+#                                 {o,o}                                        #
+#                                 |)__)                                        #
+#                                 -"-"-                                        #
+#                                                                              #
+################################################################################
 #
-#       .
-#        ":"
-#      ___:____     |"\/"|
-#    ,'        `.    \  /
-#    |  O        \___/  |
-#  ~^~^~^~^~^~^~^~^~^~^~^~^~
+# The Duplicity image
+#
+#################################---INFO---#####################################
 
-# The Cuplicity image
-
-FROM ubuntu:latest
+FROM debian:latest
 MAINTAINER DevOps <devops@kendu.si>
 
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update -y
+################################################################################
 
-# Instaling package and clean up the mess
-RUN apt-get update -y \
-    && \
-    apt-get -y install \
+#################################---ENV---######################################
+
+ENV DEBIAN_FRONTEND noninteractive
+
+################################################################################
+
+################################---BUILD---#####################################
+
+RUN apt-get update && \
+    apt-get upgrade --yes --force-yes && \
+    apt-get install --yes --force-yes \
         duplicity \
         python-paramiko \
     && \
-    apt-get upgrade -y && \
     apt-get clean
+
+################################################################################
