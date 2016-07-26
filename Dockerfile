@@ -26,11 +26,12 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get upgrade --yes --force-yes && \
     apt-get install --yes --force-yes \
-        python-pip \
+        python-paramiko \
         duplicity \
+        openssl \
+        python \
     && \
-    apt-get clean; \
-    pip install -U pip
-RUN pip install -U paramiko
+    apt-get clean
+
 
 ################################################################################
