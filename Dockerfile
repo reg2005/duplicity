@@ -27,6 +27,7 @@ RUN apt-get update && \
     apt-get upgrade --yes --force-yes && \
     apt-get install --yes --force-yes \
         python-paramiko \
+        python-swiftclient \
         duplicity \
         openssl \
         python \
