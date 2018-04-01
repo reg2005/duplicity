@@ -26,6 +26,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get upgrade --yes --force-yes && \
     apt-get install --yes --force-yes \
+        gpg \
         python-paramiko \
         python-swiftclient \
         duplicity \
