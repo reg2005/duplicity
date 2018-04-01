@@ -29,11 +29,14 @@ RUN apt-get update && \
         gpg \
         python-paramiko \
         python-swiftclient \
+        librsync-dev \
+        bzr \
         duplicity \
         openssl \
         python \
     && \
     apt-get clean
-
+RUN bzr branch lp:~mhu-s/duplicity/swiftbackend
+RUN cd swiftbackend && sudo python dist/setup.py install
 
 ################################################################################
