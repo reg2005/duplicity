@@ -24,8 +24,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ################################---BUILD---#####################################
 
 RUN apt-get update && \
-    apt-get upgrade --yes --force-yes && \
-    apt-get install --yes --force-yes \
+    apt-get upgrade --yes --force-yes
+RUN apt-get install --yes --force-yes \
         gpg \
         python-paramiko \
         python-swiftclient \
