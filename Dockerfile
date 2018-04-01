@@ -37,6 +37,6 @@ RUN apt-get install --yes --force-yes \
     && \
     apt-get clean
 RUN bzr branch lp:~mhu-s/duplicity/swiftbackend
-RUN cd swiftbackend && sudo python dist/setup.py install
+RUN cd swiftbackend && python dist/setup.py install
 
 ################################################################################
